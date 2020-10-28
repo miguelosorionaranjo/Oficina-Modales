@@ -180,6 +180,7 @@ $(document).ready(function() {
   $('#task-form').submit(e => {
     e.preventDefault();
     const postData = {
+      id: $('#id').val(),
       clicencia: $('#clicencia').val(),
       csoat: $('#csoat').val(),
       crtm: $('#crtm').val(),
@@ -249,41 +250,141 @@ $(document).ready(function() {
                   <tr taskId="${task.id}">
                   <td>${task.id}</td>
                   <td  >
-                  ${task.fuec}
+                  ${task.clicencia}
                   </td>
                   <td>
                   <a href="#" class="task-item">
-                    ${task.name} 
+                    ${task.csoat} 
                   </a>
                   </td>
                   <td>
                   <a href="#" class="task-item">
-                    ${task.apellido} 
+                    ${task.crtm} 
                   </a>
                   </td>
-                  <td>${task.description}</td>
+                  <td>${task.crc}</td>
                   <td  >
-                  ${task.contratante}
+                  ${task.cdelanteras}
                   </td>
                   <td  >
-                  ${task.objetocontrato}
+                  ${task.ctraseras}
                   </td>
                   <td  >
-                  ${task.cc}
+                  ${task.caltass}
                   </td>
                   <td   >
-                  ${task.origen}
+                  ${task.cbajass}
                   </td>
                   <td >
-                  ${task.recorrido}
+                  ${task.cstop}
                   </td>
                   <td >
-                  ${task.fecha}
+                  ${task.creversa}
                   </td>
-                  <td>
-                    <button class="task-activa btn btn-success-activa ">
-                    ${task.activa}
-                    </button>
+                  <td  >
+                  ${task.cparqueo}
+                  </td>
+                  <td  >
+                  ${task.cdia}
+                  </td>
+                  <td  >
+                  ${task.cprincipal}
+                  </td>
+                  <td  >
+                  ${task.cemergencia}
+                  </td>
+                  <td  >
+                  ${task.cddelanteras}
+                  </td>
+                  <td  >
+                  ${task.cttraseras}
+                  </td>
+                  <td  >
+                  ${task.crepuesto}
+                  </td>
+                  <td  >
+                  ${task.cderecho}
+                  </td>
+                  <td  >
+                  ${task.cizquierdo}
+                  </td>
+                  <td  >
+                  ${task.cretrovisor}
+                  </td>
+                  <td  >
+                  ${task.cbocina}
+                  </td>
+                  <td  >
+                  ${task.cfrenos}
+                  </td>
+                  <td  >
+                  ${task.caceite}
+                  </td>
+                  <td  >
+                  ${task.crefrigerante}
+                  </td>
+                  <td  >
+                  ${task.cdelan}
+                  </td>
+                  <td  >
+                  ${task.ctras}
+                  </td>
+                  <td  >
+                  ${task.ccinturones}
+                  </td>
+                  <td  >
+                  ${task.ca}
+                  </td>
+                  <td  >
+                  ${task.sincronizacion}
+                  </td>
+                  <td  >
+                  ${task.cab}
+                  </td>
+                  <td  >
+                  ${task.cll}
+                  </td>
+                  <td  >
+                  ${task.rtmecanica}
+                  </td>
+                  <td  >
+                  ${task.casoat}
+                  </td>
+                  <td  >
+                  ${task.fv}
+                  </td>
+                  <td  >
+                  ${task.ecapacidad}
+                  </td>
+                  <td  >
+                  ${task.calicates}
+                  </td>
+                  <td  >
+                  ${task.cdestorni}
+                  </td>
+                  <td  >
+                  ${task.cle}
+                  </td>
+                  <td  >
+                  ${task.clf}
+                  </td>
+                  <td  >
+                  ${task.ccruceta}
+                  </td>
+                  <td  >
+                  ${task.cgh}
+                  </td>
+                  <td  >
+                  ${task.ctaco}
+                  </td>
+                  <td  >
+                  ${task.csenal}
+                  </td>
+                  <td  >
+                  ${task.cchaleco}
+                  </td>
+                  <td  >
+                  ${task.cbotiquin}
                   </td>
                   <td>
                     <button class="task-delete btn btn-danger">

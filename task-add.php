@@ -1,6 +1,6 @@
 <?php
   include('database.php');
-if(isset($_POST['id'])) {
+if(isset($_POST['csoat'])) {
   $task_clicencia = $_POST['clicencia'];
   $task_csoat = $_POST['csoat'];
   $task_crtm = $_POST['crtm'];
