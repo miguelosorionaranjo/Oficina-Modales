@@ -175,7 +175,7 @@ $(document).ready(function() {
   // Testing Jquery
   console.log('jquery is working!');
   fetchTasks();
-  fetchAprobado();
+ 
   $('#task-result').hide();
   $('#task-form').submit(e => {
     e.preventDefault();
@@ -233,7 +233,7 @@ $(document).ready(function() {
       console.log(response);
       $('#task-form').trigger('reset');
       fetchTasks();
-      fetchAprobado();
+    
     });
   });
   // Fetching Tasks
@@ -328,75 +328,7 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on('click', '.task-activa', (e) => {
-    if(confirm('¿Estás seguro de que quieres activarlo?')) {
-      const element = $(this)[0].activeElement.parentElement.parentElement;
-      const id = $(element).attr('taskId');
-      $.post('task-activa.php', {id}, (response) => {
-        fetchTasks();
-      });
-    }
-  });
-  // Consulta de Aprobados
-  function fetchAprobado() {
-   $.ajax({
-     url: 'task-aprobado.php',
-     type: 'GET',
-     success: function(response) {
-       const aprobado = JSON.parse(response);
-       let template = '';
-       aprobado.forEach(task => {
-         template += `
-                 <tr taskId="${task.id}">
-                 <td>${task.id}</td>
-                 <td  >
-                 ${task.fuec}
-                 </td>
-                 <td>
-                 <a href="#" class="task-item">
-                   ${task.name} 
-                 </a>
-                 </td>
-                 <td>
-                 <a href="#" class="task-item">
-                   ${task.apellido} 
-                 </a>
-                 </td>
-                 <td>${task.description}</td>
-                 <td  >
-                 ${task.contratante}
-                 </td>
-                 <td  >
-                 ${task.objetocontrato}
-                 </td>
-                 <td  >
-                 ${task.cc}
-                 </td>
-                 <td   >
-                 ${task.origen}
-                 </td>
-                 <td >
-                 ${task.recorrido}
-                 </td>
-                 <td >
-                  ${task.fecha}
-                  </td>
-                 <td>
-                   <button class="task-activa btn btn-success-activa ">
-                   ${task.activa}
-                   </button>
-                 </td>
-                 <td>
-                   <button class="task-delete btn btn-danger">
-                    Eliminar 
-                   </button>
-                 </td>
-                 </tr>
-               `
-       });
-       $('#aprobado').html(template);
-     }
-   });
- }
+ 
+ 
  // Fin del Código
 });
