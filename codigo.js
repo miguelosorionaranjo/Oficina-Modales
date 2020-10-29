@@ -180,7 +180,6 @@ $(document).ready(function() {
   $('#task-form').submit(e => {
     e.preventDefault();
     const postData = {
-      id: $('#id').val(),
       clicencia: $('#clicencia').val(),
       csoat: $('#csoat').val(),
       crtm: $('#crtm').val(),
@@ -404,15 +403,51 @@ $(document).ready(function() {
     const id = $(element).attr('taskId');
     $.post('task-single.php', {id}, (response) => {
       const task = JSON.parse(response);
-      $('#fuec').val(task.fuec);
-      $('#name').val(task.name);
-      $('#apellido').val(task.apellido);
-      $('#description').val(task.description);
-      $('#contratante').val(task.contratante);
-      $('#objetocontrato').val(task.objetocontrato);
-      $('#cc').val(task.cc);
-      $('#origen').val(task.origen);
-      $('#recorrido').val(task.recorrido);
+      $('#clicencia').val(task.clicencia);
+      $('#csoat').val(task.csoat);
+      $('#crtm').val(task.crtm);
+      $('#crc').val(task.crc);
+      $('#cdelanteras').val(task.cdelanteras);
+      $('#ctraseras').val(task.ctraseras);
+      $('#caltass').val(task.caltass);
+      $('#cbajass').val(task.cbajass);
+      $('#cstop').val(task.cstop);
+      $('#creversa').val(task.creversa);
+      $('#cparqueo').val(task.cparqueo);
+      $('#cdia').val(task.cdia);
+      $('#cprincipal').val(task.cprincipal);
+      $('#cemergencia').val(task.cemergencia);
+      $('#cddelanteras').val(task.cddelanteras);
+      $('#cttraseras').val(task.cttraseras);
+      $('#crepuesto').val(task.crepuesto);
+      $('#cderecho').val(task.cderecho);
+      $('#cizquierdo').val(task.cizquierdo);
+      $('#cretrovisor').val(task.cretrovisor);
+      $('#cbocina').val(task.cbocina);
+      $('#cfrenos').val(task.cfrenos);
+      $('#caceite').val(task.caceite);
+      $('#crefrigerante').val(task.crefrigerante);
+      $('#cdelan').val(task.cdelan);
+      $('#ctras').val(task.ctras);
+      $('#ccinturones').val(task.ccinturones);
+      $('#ca').val(task.ca);
+      $('#sincronizacion').val(task.sincronizacion);
+      $('#ab').val(task.ab);
+      $('#cll').val(task.cll);
+      $('#rtmecanica').val(task.rtmecanica);
+      $('#casoat').val(task.casoat);
+      $('#fv').val(task.cfv);
+      $('#ecapacidad').val(task.ecapacidad);
+      $('#calicates').val(task.calicates);
+      $('#cdestorni').val(task.cdestorni);
+      $('#cle').val(task.cle);
+      $('#clf').val(task.clf);
+      $('#ccruceta').val(task.ccruceta);
+      $('#cgh').val(task.cgh);
+      $('#ctaco').val(task.ctaco);
+      $('#csenal').val(task.csenal);
+      $('#cchaleco').val(task.cchaleco);
+      $('#cbotiquin').val(task.cbotiquin);
       $('#taskId').val(task.id);
       edit = true;
     });
