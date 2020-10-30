@@ -338,7 +338,7 @@ $(document).ready(function() {
                   ${task.sincronizacion}
                   </td>
                   <td  >
-                  ${task.cab}
+                  ${task.ab}
                   </td>
                   <td  >
                   ${task.cll}
