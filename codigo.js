@@ -436,7 +436,7 @@ $(document).ready(function() {
       $('#cll').val(task.cll);
       $('#rtmecanica').val(task.rtmecanica);
       $('#casoat').val(task.casoat);
-      $('#fv').val(task.cfv);
+      $('#fv').val(task.fv);
       $('#ecapacidad').val(task.ecapacidad);
       $('#calicates').val(task.calicates);
       $('#cdestorni').val(task.cdestorni);

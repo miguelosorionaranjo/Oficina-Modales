@@ -21,7 +21,9 @@ width: 450px;
 padding: 1em;
 border: 1px solid #CCC;
 border-radius: 1em;
+color:black;
 }
+
 ul {
 list-style: none;
 padding: 0;
@@ -206,7 +208,7 @@ input:focus:invalid {
   input[type=button], input[type=submit], input[type=reset] {
   background-color: #17a2f3;
   border: none;
-  color: white;
+  color: #CCC;
   padding: 16px 25px;
   text-decoration: none;
   margin: 4px 2px;
@@ -217,6 +219,9 @@ input:focus:invalid {
 .formularioss {
   width: 100%;
 }
+#regiration_form fieldset:not(:first-of-type) {
+		display: none;
+  }
 </style>
   <head>
     <meta charset="utf-8">
@@ -226,7 +231,8 @@ input:focus:invalid {
     <meta name="generator" content="Jekyll v4.1.1">
     <link rel="shortcut icon" href="#" />      
     <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">	         
-    <link rel="stylesheet" href="jqueryUI/jquery-ui-1.12.1/jquery-ui.min.css">  
+    <link rel="stylesheet" href="jqueryUI/jquery-ui-1.12.1/jquery-ui.min.css"> 
+     
     <title>Formularios</title>  
   </head>
   <!--Inicio del Código     -->
@@ -484,29 +490,29 @@ input:focus:invalid {
           <div  align="center">
             <p>Documentos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="licencia">Licencia de Conductor</label> 
+              <label for="clicencia">Licencia de Conductor</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="clicencia" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="clicencia" value="no" required >
+              <input class="radio" type="radio" id="clicencia"  class="form-control" name="data[clicencia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="clicencia" class="form-control" name="data[clicencia]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="soat"> SOAT</label> 
+              <label for="csoat"> SOAT</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="csoat" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="csoat" value="no" required >
+              <input class="radio" type="radio" id="csoat" class="form-control" name="data[csoat]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="csoat" class="form-control" name="data[csoat]" value="no" required >
           </p>  
           <p class="caja">
             
-            <label for="rtm">RTM</label> 
+            <label for="crtm">RTM</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="crtm" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="crtm" value="no"required >
+            <input class="radio" type="radio" id="crtm" class="form-control" name="data[crtm]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="crtm" class="form-control" name="data[crtm]" value="no"required >
           </p>  
           <p class="caja">
-              <label for="seguro">Seguro de Daños y RC</label> 
+              <label for="crc">Seguro de Daños y RC</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="crc" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="crc" value="no" required >
+              <input class="radio" type="radio" id="crc" class="form-control" name="data[crc]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="crc" class="form-control" name="data[crc]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -514,7 +520,7 @@ input:focus:invalid {
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-          <input type="button" name="data[password]" class="next btn btn-info" value="Siguiente" /> 
+          <input type="button" name="next" class="next btn btn-info" value="Siguiente" /> 
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -537,16 +543,16 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Direccionales:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="delanteras">Delanteras</label> 
+              <label for="cdelanteras">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdelanteras" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdelanteras" value="no" required >
+              <input class="radio" type="radio" id="cdelanteras" class="form-control" name="data[cdelanteras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cdelanteras" class="form-control" name="data[cdelanteras]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="traseras"> Traseras</label> 
+              <label for="ctraseras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ctraseras" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="ctraseras" value="no" required >
+              <input class="radio" type="radio" id="ctraseras" class="form-control" name="data[ctraseras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="ctraseras" class="form-control" name="data[ctraseras]" value="no" required >
           </p>   
           </div>
           <div class="form-group" align="center">
@@ -578,35 +584,35 @@ input:focus:invalid {
           <div class="form-group" align="center">
             <p>Luces:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="altas">Altas</label> 
+              <label for="caltass">Altas</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="caltass" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="caltass" value="no" required >
+              <input class="radio" type="radio" id="caltass" class="form-control" name="data[caltass]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="caltass" class="form-control" name="data[caltass]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="bajas"> Bajas</label> 
+              <label for="cbajass"> Bajas</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cbajass" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="cbajass" value="no" required >
+              <input class="radio" type="radio" id="cbajass" class="form-control" name="data[cbajass]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cbajass" class="form-control" name="data[cbajass]" value="no" required >
           </p>  
           <p class="caja">
             
-            <label for="stop">Stop</label> 
+            <label for="cstop">Stop</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="cstop" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="cstop" value="no"required >
+            <input class="radio" type="radio" id="cstop" class="form-control" name="data[cstop]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="cstop" class="form-control" name="data[cstop]" value="no"required >
           </p>  
           <p class="caja">
-              <label for="reversa">Reversa</label> 
+              <label for="creversa">Reversa</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="creversa" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="creversa" value="no" required >
+              <input class="radio" type="radio" id="creversa" class="form-control" name="data[creversa]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="creversa" class="form-control" name="data[creversa]" value="no" required >
           </p>  
           <p class="caja">
-            <label for="parqueo">Parqueo</label> 
+            <label for="cparqueo">Parqueo</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="cparqueo" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input class="radio" type="radio" class="form-control" name="cparqueo" value="no" required >
+            <input class="radio" type="radio" id="cparqueo" class="form-control" name="data[cparqueo]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="cparqueo" class="form-control" name="data[cparqueo]" value="no" required >
         </p>  
           </div>
           <div class="form-group" align="center">
@@ -638,10 +644,10 @@ input:focus:invalid {
           <div class="form-group" align="center">
             <p>Limpiabrisas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="dia">Derecha/Izquierda/<br>Atrás</label> 
+              <label for="cdia">Derecha/Izquierda/<br>Atrás</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdia" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdia" value="no" required >
+              <input class="radio" type="radio" id="cdia" class="form-control" name="data[cdia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cdia" class="form-control" name="data[cdia]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -673,16 +679,16 @@ input:focus:invalid {
           <div class="form-group" align="center">
             <p>Frenos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="principal">Principal</label> 
+              <label for="cprincipal">Principal</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cprincipal" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cprincipal" value="no" required >
+              <input class="radio" type="radio" id="cprincipal" class="form-control" name="data[cprincipal]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cprincipal" class="form-control" name="data[cprincipal]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="emergencia"> Emergencia</label> 
+              <label for="cemergencia"> Emergencia</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cemergencia" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="cemergencia" value="no" required >
+              <input class="radio" type="radio" id="cemergencia" class="form-control" name="data[cemergencia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cemergencia" class="form-control" name="data[cemergencia]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -714,22 +720,22 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Llantas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="ddelanteras">Delanteras</label> 
+              <label for="cddelanteras">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cddelanteras" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cddelanteras" value="no" required >
+              <input class="radio" type="radio" id="cddelanteras" class="form-control" name="data[cddelanteras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cddelanteras" class="form-control" name="data[cddelanteras]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="ttraseras"> Traseras</label> 
+              <label for="cttraseras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" class="form-control" name="cttraseras" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="cttraseras" value="no" required >
+               <input class="radio" type="radio" id="cttraseras" class="form-control" name="data[cttraseras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cttraseras" class="form-control" name="data[cttraseras]" value="no" required >
           </p>  
           <p class="caja">
-            <label for="repuesto"> Repuesto</label> 
+            <label for="crepuesto"> Repuesto</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="crepuesto" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input class="radio" type="radio" class="form-control" name="crepuesto" value="no" required >
+            <input class="radio" type="radio" id="crepuesto" class="form-control" name="data[crepuesto]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="crepuesto" class="form-control" name="data[crepuesto]" value="no" required >
         </p> 
           </div>
           <div class="form-group" align="center">
@@ -761,22 +767,22 @@ input:focus:invalid {
          <div class="form-group" align="center">
             <p>Espejos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="derecho">Derecho</label> 
+              <label for="cderecho">Derecho</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" class="form-control" name="cderecho" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cderecho" value="no" required >
+               <input class="radio" type="radio" id="cderecho" class="form-control" name="data[cderecho]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cderecho" class="form-control" name="data[cderecho]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="izquierdo"> Izquierdo</label> 
+              <label for="cizquierdo"> Izquierdo</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cizquierdo" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="cizquierdo" value="no" required >
+              <input class="radio" type="radio" id="cizquierdo" class="form-control" name="data[cizquierdo]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cizquierdo" class="form-control" name="data[cizquierdo]" value="no" required >
           </p>  
           <p class="caja">
-            <label for="retrovisor"> Retrovisor</label> 
+            <label for="cretrovisor"> Retrovisor</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="cretrovisor" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input class="radio" type="radio" class="form-control" name="cretrovisor" value="no" required >
+            <input class="radio" type="radio" id="cretrovisor" class="form-control" name="data[cretrovisor]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="cretrovisor" class="form-control" name="data[cretrovisor]" value="no" required >
         </p> 
           </div>
           <div class="form-group" align="center">
@@ -809,10 +815,10 @@ input:focus:invalid {
             <p>Bocina:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
              
-              <label for="bocina">Bocina</label> 
+              <label for="cbocina">Bocina</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cbocina" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control"  name="cbocina" value="no" required >
+              <input class="radio" type="radio" id="cbocina" class="form-control" name="data[cbocina]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cbocina" class="form-control"  name="data[cbocina]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -844,22 +850,22 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Niveles de Fluidos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="frenos">Frenos</label> 
+              <label for="cfrenos">Frenos</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cfrenos" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cfrenos" value="no" required >
+              <input class="radio" type="radio" id="cfrenos" class="form-control" name="data[cfrenos]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cfrenos" class="form-control" name="data[cfrenos]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="aceite"> Aceite</label> 
+              <label for="caceite"> Aceite</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" class="form-control" name="caceite" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="caceite" value="no" required >
+               <input class="radio" type="radio" id="caceite" class="form-control" name="data[caceite]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="caceite" class="form-control" name="data[caceite]" value="no" required >
           </p>  
           <p class="caja">
-            <label for="refrigerante"> Refrigerante</label> 
+            <label for="crefrigerante"> Refrigerante</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="crefrigerante" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input class="radio" type="radio" class="form-control" name="crefrigerante" value="no" required >
+              <input class="radio" type="radio" id="crefrigerante" class="form-control" name="data[crefrigerante]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="crefrigerante" class="form-control" name="data[crefrigerante]" value="no" required >
         </p> 
           </div>
           <div class="form-group" align="center">
@@ -891,16 +897,16 @@ input:focus:invalid {
           <div class="form-group" align="center">
             <p>Apoyacabezas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="delan">Delanteras</label> 
+              <label for="cdelan">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdelan" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdelan" value="no" required >
+              <input class="radio" type="radio" id="cdelan" class="form-control" name="data[cdelan]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cdelan" class="form-control" name="data[cdelan]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="tras"> Traseras</label> 
+              <label for="ctras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  class="form-control" name="ctras" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="radio" type="radio" class="form-control" name="ctras" value="no" required >
+              <input class="radio" type="radio"  id="ctras" class="form-control" name="data[ctras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="ctras" class="form-control" name="data[ctras]" value="no" required >
           </p>
           </div>
           <div class="form-group" align="center">
@@ -932,10 +938,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Cinturones de Seguridad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="cinturones">Cinturones</label> 
+              <label for="ccinturones">Cinturones</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control"  name="ccinturones" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ccinturones" value="no" required >
+              <input class="radio" type="radio" id="ccinturones" class="form-control"  name="data[ccinturones]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="ccinturones" class="form-control" name="data[ccinturones]" value="no" required >
           </p>
           </div>
           <div class="form-group" align="center">
@@ -970,22 +976,23 @@ input:focus:invalid {
             <p class="caja">
               <label for="ca">Cambio de Aceite</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="ca" min="2018-01-02"   value="2020-12-31" required>
-          </p>  
+              <input class="calen" type="date" id="ca" class="form-control" nombre="data[ca]" min="2018-01-02"   value="2020-12-31" required>
+         
+            </p>  
           <p class="caja">
               <label for="sincronizacion"> Sincronización</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="sincronizacion" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="sincronizacion" class="form-control" nombre="data[sincronizacion]" min="2018-01-02"   value="2020-12-31" required>
           </p>  
           <p class="caja">
             <label for="ab"> Alineación/<br>Balanceo</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="calen" type="date" nombre="ab" class="form-control" min="2018-01-02"   value="2020-12-31" required>
+            <input class="calen" type="date" id="ab" nombre="data[ab]" class="form-control" min="2018-01-02"   value="2020-12-31" required>
         </p> 
         <p class="caja">
           <label for="cll"> Cambio de Llantas</label> 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="cll" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="cll" class="form-control" nombre="data[cll]" min="2018-01-02"   value="2020-12-31" required>
       </p> 
           </div>
           <div class="form-group" align="center">
@@ -1019,12 +1026,12 @@ input:focus:invalid {
             <p class="caja">
               <label for="rtmecanica">Revisión Técnico Mecánica</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="rtmecanica" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="rtmecanica" class="form-control" nombre="data[rtmecanica]" min="2018-01-02"   value="2020-12-31" required>
           </p>  
           <p class="caja">
               <label for="casoat"> SOAT</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="casoat" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="casoat" class="form-control" nombre="data[casoat]" min="2018-01-02"   value="2020-12-31" required>
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1058,12 +1065,12 @@ input:focus:invalid {
             <p class="caja">
               <label for="fv"> Fecha de Vencimiento</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" class="form-control" nombre="fv" min="2018-01-02"   value="2020-12-31" required>
-          </p>  
+              <input class="calen" type="date" id="fv" class="form-control" nombre="data[fv]" min="2018-01-02"   value="2020-12-31" required>
+            </p>  
           <p class="caja">
-              <label for="capacidad"> Capacidad</label> 
+              <label for="ecapacidad"> Capacidad</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="capacidad" name="ecapacidad" class="form-control" required type="number" name="capacidad"  />
+              <input class="capacidad" name="data[ecapacidad]" id="ecapacidad" class="form-control" required type="number" name="capacidad"  />
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1096,29 +1103,29 @@ input:focus:invalid {
           <div class="form-group" align="center">
             <p>Herramientas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="alicates"> Alicates</label> 
+              <label for="calicates"> Alicates</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="calicates" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="calicates" value="no" required >
+              <input class="radio" type="radio" id="calicates" class="form-control" name="data[calicates]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="calicates" class="form-control" name="data[calicates]" value="no" required >
           </p>  
           <p class="caja">
-              <label for="destornilladores"> Destornilladores</label> 
+              <label for="cdestorni"> Destornilladores</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdestorni" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cdestorni" value="no" required >
+              <input class="radio" type="radio" id="cdestorni" class="form-control" name="data[cdestorni]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cdestorni" class="form-control" name="data[cdestorni]" value="no" required >
           </p>  
           <p class="caja">
              
-            <label for="le"> Llaves de Expansión</label> 
+            <label for="cle"> Llaves de Expansión</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" class="form-control" name="cle" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cle" value="no" required >
+            <input class="radio" type="radio" id="cle" class="form-control" name="data[cle]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="radio" type="radio" id="cle" class="form-control" name="data[cle]" value="no" required >
         </p> 
         <p class="caja">
-          <label for="lf"> Llaves Fijas</label> 
+          <label for="clf"> Llaves Fijas</label> 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="clf" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="clf" value="no" required >
+              <input class="radio" type="radio" id="clf" class="form-control" name="data[clf]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="clf" class="form-control" name="data[clf]" value="no" required >
       </p> 
           </div>
           <div class="form-group" align="center">
@@ -1153,10 +1160,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Cruceta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="cruceta">Cruceta</label> 
+              <label for="ccruceta">Cruceta</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ccruceta" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ccruceta" value="no" required >
+              <input class="radio" type="radio" id="ccruceta" class="form-control" name="data[ccruceta]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="ccruceta" class="form-control" name="data[ccruceta]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1189,10 +1196,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Gato Hidráulico:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="gh">Gato Hidráulico</label> 
+              <label for="cgh">Gato Hidráulico</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cgh" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cgh" value="no" required >
+              <input class="radio" type="radio" id="cgh" class="form-control" name="data[cgh]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cgh" class="form-control" name="data[cgh]" value="no" required >
           </p> 
           </div>
           <div class="form-group" align="center">
@@ -1225,10 +1232,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Taco:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="taco">Taco</label> 
+              <label for="ctaco">Taco</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ctaco" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="ctaco" value="no" required >
+              <input class="radio" type="radio" id="ctaco" class="form-control" name="data[ctaco]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="ctaco" class="form-control" name="data[ctaco]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1261,10 +1268,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Señales:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="senales">Señales</label> 
+              <label for="csenal">Señales</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="csenal" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="csenal" value="no" required >
+              <input class="radio" type="radio" id="csenal" class="form-control" name="data[csenal]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="csenal" class="form-control" name="data[csenal]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1297,10 +1304,10 @@ input:focus:invalid {
         <div class="form-group" align="center">
             <p>Cruceta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
-              <label for="chaleco">Chaleco Reflectivo</label> 
+              <label for="cchaleco">Chaleco Reflectivo</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  class="form-control" name="cchaleco" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" class="form-control" name="cchaleco" value="no" required >
+              <input class="radio" type="radio"  id="cchaleco" class="form-control" name="data[cchaleco]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cchaleco" class="form-control" name="data[cchaleco]" value="no" required >
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1335,19 +1342,24 @@ input:focus:invalid {
             <p>Botiquín:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme  /  No Conforme</p> 
             <p class="caja">
              
-              <label for="botiquin" class="form-group">Botiquín</label> 
+              <label for="cbotiquin" class="form-group">Botiquín</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  class="form-control" name="cbotiquin" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  class="form-control" name="cbotiquin" value="no" required >
+              <input class="radio" type="radio" id="cbotiquin" class="form-control" name="data[cbotiquin]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="cbotiquin" class="form-control" name="data[cbotiquin]" value="no" required >
           </p>  
           </div>
-          <div  align="center">
+          <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea  id="message-text"></textarea>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
-          <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+          <br>
+          <div  class="form-group" align="center"  >
+
+            <input type="hidden" id="taskId">
+                  <button  type="submit" class="btn btn-secondary btn-block text-center " >
+                  Aceptar
+                  </button>
+           
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1356,10 +1368,7 @@ input:focus:invalid {
   </div>
 </div>
 
-<input type="hidden" id="taskId">
-                  <button  type="submit" class="btn btn-secondary btn-block text-center  " width="20%">
-                  Aceptar
-                  </button>
+
 </form>
 <!--Final  Modales     -->
   </div>
