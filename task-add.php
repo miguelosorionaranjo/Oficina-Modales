@@ -1,6 +1,7 @@
 <?php
   include('database.php');
-if(isset($_POST['clicencia'])) {
+if(isset($_POST['csoat'])) {
+ 
   $task_clicencia = $_POST['clicencia'];
   $task_csoat = $_POST['csoat'];
   $task_crtm = $_POST['crtm'];
@@ -46,7 +47,9 @@ if(isset($_POST['clicencia'])) {
   $task_csenal = $_POST['csenal'];
   $task_cchaleco = $_POST['cchaleco'];
   $task_cbotiquin = $_POST['cbotiquin'];
-  $query = "INSERT into pesv (clicencia, 
+  $query = "INSERT into pesv (
+                              
+                              clicencia, 
                               csoat, 
                               crtm, 
                               crc, 
@@ -93,6 +96,7 @@ if(isset($_POST['clicencia'])) {
                               cbotiquin) 
                               VALUES 
                               (
+                                
                               '$task_clicencia',
                               '$task_csoat', 
                               '$task_crtm', 
@@ -144,5 +148,5 @@ if(isset($_POST['clicencia'])) {
   }
   echo "Registrado con Éxito";  
 
-}
+}    
 ?>
