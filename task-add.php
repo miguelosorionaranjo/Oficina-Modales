@@ -1,6 +1,6 @@
 <?php
   include('database.php');
-if(isset($_POST['csoat'])) {
+if(isset($_POST['clicencia'])) {
  
   $task_clicencia = $_POST['clicencia'];
   $task_csoat = $_POST['csoat'];
@@ -141,7 +141,7 @@ if(isset($_POST['csoat'])) {
                               '$task_ctaco',
                              '$task_csenal',
                              '$task_cchaleco',
-                             '$task_cbotiquin',)";
+                             '$task_cbotiquin')";
   $result = mysqli_query($connection, $query);
   if (!$result) {
     die('Query Failed.');

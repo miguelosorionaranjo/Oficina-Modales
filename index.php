@@ -1359,6 +1359,9 @@ input:focus:invalid {
                   <button  type="submit" class="btn btn-secondary btn-block text-center " >
                   Aceptar
                   </button>
+
+                  
+                  
            
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
