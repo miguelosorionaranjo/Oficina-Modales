@@ -37,7 +37,7 @@ $(document).ready(function() {
       crefrigerante: $('#crefrigerante').val(),
       cdelan: $('#cdelan').val(),
       ctras: $('#ctras').val(),
-      ccinturores: $('#ccinturones').val(),
+      ccinturones: $('#ccinturones').val(),
       ca: $('#ca').val(),
       sincronizacion: $('#sincronizacion').val(),
       ab: $('#ab').val(),

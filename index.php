@@ -1359,8 +1359,6 @@ input:focus:invalid {
                   <button  type="submit" class="btn btn-secondary btn-block text-center " >
                   Aceptar
                   </button>
-
-                  
                   
            
           </div>
