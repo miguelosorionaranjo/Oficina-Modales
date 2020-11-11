@@ -149,4 +149,5 @@ if(isset($_POST['clicencia'])) {
   echo "Registrado con Éxito";  
 
 }    
+
 ?>

@@ -492,7 +492,7 @@ input:focus:invalid {
             <p class="caja">
               <label for="clicencia">Licencia de Conductor</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="clicencia"  class="form-control" name="data[clicencia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="radio" type="radio" id="clicencia"  class="form-control" name="data[clicencia]" value="si" required  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input class="radio" type="radio" id="clicencia" class="form-control" name="data[clicencia]" value="no" required >
           </p>  
           <p class="caja">
@@ -1049,6 +1049,7 @@ input:focus:invalid {
   </div>
 </div>
 <!--Sistema de Seguridad      -->
+<!--Extintor     -->
 <div class="modal fade" id="exampleModal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel20" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -1070,7 +1071,7 @@ input:focus:invalid {
           <p class="caja">
               <label for="ecapacidad"> Capacidad</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="capacidad" name="data[ecapacidad]" id="ecapacidad" class="form-control" required type="number" name="capacidad"  />
+              <input class="capacidad" nombre="data[ecapacidad]" id="ecapacidad" class="form-control" required type="number"   />
           </p>  
           </div>
           <div class="form-group" align="center">
