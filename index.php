@@ -1611,6 +1611,20 @@ input:focus:invalid {
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <br>
+          <div  class="form-group" align="center" >
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+<div class="form-group" align="center">
+            <label for="message-text" class="col-form-label">Observaciones Generales:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
           <div  class="form-group" align="center"  >
 
             <input type="hidden" id="taskId">
@@ -1620,14 +1634,6 @@ input:focus:invalid {
                   
            
           </div>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-      </fieldset>
-    </div>
-  </div>
-</div>
-
-
 </form>
 <!--Final  Modales     -->
   </div>
