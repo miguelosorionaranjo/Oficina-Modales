@@ -222,6 +222,17 @@ input:focus:invalid {
 #regiration_form fieldset:not(:first-of-type) {
 		display: none;
   }
+
+  .error{
+			background-color: #FF9185;
+			font-size: 12px;
+			padding: 10px;
+		}
+		.correcto{
+			background-color: #A0DEA7;
+			font-size: 12px;
+			padding: 10px;
+		}
 </style>
   <head>
     <meta charset="utf-8">
@@ -472,6 +483,152 @@ input:focus:invalid {
 <!--Fin      -->
 
 
+
+
+
+
+<?php
+			$task_clicencia = "";
+			$task_csoat = "";
+			$task_crtm = "";
+      $task_crc = "";
+
+      $task_cdelanteras = "";
+      $task_ctraseras = "";
+
+      $task_caltass = "";
+      $task_cbajass = "";
+      $task_cstop = "";
+      $task_creversa = "";
+      $task_cparqueo = "";
+
+      $task_cdia = "";
+
+      $task_cprincipal = "";
+      $task_cemergencia = "";
+
+      $task_cddelanteras = "";
+      $task_cttraseras = "";
+      $task_crepuesto = "";
+
+      $task_cderecho = "";
+      $task_cizquierdo = "";
+      $task_cretrovisor = "";
+
+      $task_cbocina = "";
+
+      $task_cfrenos = "";
+      $task_caceite = "";
+      $task_crefrigerante = "";
+
+      $task_cdelan = "";
+      $task_ctras = "";
+
+      $task_ccinturones = "";
+
+      $task_calicates = "";
+      $task_cdestorni = "";
+      $task_cle = "";
+      $task_clf = "";
+      $task_ccruceta = "";
+
+      $task_cgh = "";
+
+      $task_ctaco = "";
+
+      $task_csenal = "";
+
+      $task_cchaleco = "";
+      
+      $task_cbotiquin = "";
+			
+			// TODO (1) declarar variable como arreglo
+			$lenguajes = array();
+			
+			if(isset($_POST['clicencia'])){
+				$task_clicencia = $_POST['clicencia'];
+				$task_csoat = $_POST['csoat'];
+				$task_crtm = $_POST['crtm'];
+				$task_crc = $_POST['crc'];
+				
+				if(isset($_POST['clicencia'])){
+					$task_clicencia = $_POST['clicencia'];
+				}else{
+					$task_clicencia = "";
+        }
+        
+        if(isset($_POST['csoat'])){
+					$task_csoat = $_POST['csoat'];
+				}else{
+					$task_csoat = "";
+        }
+        
+        if(isset($_POST['crtm'])){
+					$task_crtm = $_POST['crtm'];
+				}else{
+					$task_crtm = "";
+        }
+        
+        if(isset($_POST['crc'])){
+					$task_crc = $_POST['crc'];
+				}else{
+					$task_rc = "";
+				}
+
+				// TODO (2) Validar que existe variable nivel
+				if(isset($_POST['lenguajes'])){
+					$lenguajes = $_POST['lenguajes'];
+				}else{
+					$lenguajes = [];
+				}
+				
+
+				$radio = array();
+
+				if($task_clicencia == ""){
+					array_push($radio, "Selecciona un nivel de desarrollo.");
+        }
+        
+        if($task_csoat == ""){
+					array_push($radio, "Selecciona un nivel de desarrollo.");
+        }
+        
+        if($task_crtm == ""){
+					array_push($radio, "Selecciona un nivel de desarrollo.");
+        }
+        
+        if($task_crc == ""){
+					array_push($radio, "Selecciona un nivel de desarrollo.");
+				}
+				// TODO (3) Validar que el campo no esté vacío
+				if($lenguajes == "" || count($lenguajes) < 2){
+					array_push($radio, "Selecciona al menos dos lenguajes de programación.");
+				}
+
+				if(count($radio) > 0){
+					echo "<div class='error'>";
+					for($i = 0; $i < count($radio); $i++){
+						echo "<li>".$radio[$i]."</i>";
+					}
+				}else{
+					echo "<div class='correcto'>
+							Datos correctos";
+				}
+				echo "</div>";
+			}
+		?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!--Documentos      -->
 <br>  
 
@@ -492,35 +649,49 @@ input:focus:invalid {
             <p class="caja">
               <label for="clicencia">Licencia de Conductor</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="clicencia"  class="form-control" name="data[clicencia]" value="si" required  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="clicencia" class="form-control" name="data[clicencia]" value="no" required >
-          </p>  
+              
+              <select name="clicencia" id="clicencia" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_clicencia == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_clicencia == "no") echo "selected" ?> >No</option>
+      </select>
+
+            </p>  
           <p class="caja">
               <label for="csoat"> SOAT</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="csoat" class="form-control" name="data[csoat]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="csoat" class="form-control" name="data[csoat]" value="no" required >
-          </p>  
+              <select name="csoat" id="csoat" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_csoat == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_csoat == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           <p class="caja">
             
             <label for="crtm">RTM</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="crtm" class="form-control" name="data[crtm]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="crtm" class="form-control" name="data[crtm]" value="no"required >
+            <select name="ccrtm" id="crtm" required>
+				<option value="" >Selecciona uno</option>
+        <option value="si" <?php if($task_crtm == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_crtm == "no") echo "selected" ?> >No</option>
+      </select>
           </p>  
           <p class="caja">
               <label for="crc">Seguro de Daños y RC</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="crc" class="form-control" name="data[crc]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="crc" class="form-control" name="data[crc]" value="no" required >
-          </p>  
+              <select name="crc" id="crc" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_crc == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_crc == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-          <input type="button" name="next" class="next btn btn-info" value="Siguiente" /> 
+          <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" /> 
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -545,23 +716,29 @@ input:focus:invalid {
             <p class="caja">
               <label for="cdelanteras">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdelanteras" class="form-control" name="data[cdelanteras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdelanteras" class="form-control" name="data[cdelanteras]" value="no" required >
-          </p>  
+              <select name="cdelanteras" id="cdelanteras" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cdelanteras == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cdelanteras == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           <p class="caja">
               <label for="ctraseras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ctraseras" class="form-control" name="data[ctraseras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ctraseras" class="form-control" name="data[ctraseras]" value="no" required >
-          </p>   
+              <select name="ctraseras" id="ctraseras" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_ctraseras == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_ctraseras == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>   
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+           
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -586,42 +763,57 @@ input:focus:invalid {
             <p class="caja">
               <label for="caltass">Altas</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="caltass" class="form-control" name="data[caltass]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="caltass" class="form-control" name="data[caltass]" value="no" required >
-          </p>  
+              <select name="caltass" id="caltass" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_caltass == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_caltass == "no") echo "selected" ?> >No</option>
+      </select>  
+            </p>  
           <p class="caja">
               <label for="cbajass"> Bajas</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbajass" class="form-control" name="data[cbajass]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbajass" class="form-control" name="data[cbajass]" value="no" required >
-          </p>  
+              <select name="cbajass" id="cbajass" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cbajass == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cbajass == "no") echo "selected" ?> >No</option>
+      </select> 
+            </p>  
           <p class="caja">
             
             <label for="cstop">Stop</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cstop" class="form-control" name="data[cstop]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cstop" class="form-control" name="data[cstop]" value="no"required >
+            <select name="cstop" id="cstop" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cstop == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cstop == "no") echo "selected" ?> >No</option>
+      </select>  
           </p>  
           <p class="caja">
               <label for="creversa">Reversa</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="creversa" class="form-control" name="data[creversa]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="creversa" class="form-control" name="data[creversa]" value="no" required >
-          </p>  
+              <select name="creversa" id="creversa" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_creversa == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_creversa == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           <p class="caja">
             <label for="cparqueo">Parqueo</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cparqueo" class="form-control" name="data[cparqueo]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cparqueo" class="form-control" name="data[cparqueo]" value="no" required >
-        </p>  
+            <select name="cparqueo" id="cparqueo" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cparqueo == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cparqueo == "no") echo "selected" ?> >No</option>
+      </select>  
+          </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -646,17 +838,20 @@ input:focus:invalid {
             <p class="caja">
               <label for="cdia">Derecha/Izquierda/<br>Atrás</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdia" class="form-control" name="data[cdia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdia" class="form-control" name="data[cdia]" value="no" required >
-          </p>  
+              <select name="cdia" id="cdia" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cdia == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cdia == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+           
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -681,23 +876,29 @@ input:focus:invalid {
             <p class="caja">
               <label for="cprincipal">Principal</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cprincipal" class="form-control" name="data[cprincipal]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cprincipal" class="form-control" name="data[cprincipal]" value="no" required >
-          </p>  
+              <select name="cprincipal" id="cprincipal" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cprincipal == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cprincipal == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           <p class="caja">
               <label for="cemergencia"> Emergencia</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cemergencia" class="form-control" name="data[cemergencia]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cemergencia" class="form-control" name="data[cemergencia]" value="no" required >
-          </p>  
+              <select name="cemergencia" id="cemergencia" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cemergencia == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cemergencia == "no") echo "selected" ?> >No</option>
+      </select>
+            </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -722,29 +923,38 @@ input:focus:invalid {
             <p class="caja">
               <label for="cddelanteras">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cddelanteras" class="form-control" name="data[cddelanteras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cddelanteras" class="form-control" name="data[cddelanteras]" value="no" required >
-          </p>  
+              <select name="cddelanteras" id="cddelanteras" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cddelanteras == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cddelanteras == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           <p class="caja">
               <label for="cttraseras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" id="cttraseras" class="form-control" name="data[cttraseras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cttraseras" class="form-control" name="data[cttraseras]" value="no" required >
-          </p>  
+              <select name="cttraseras" id="cttraseras" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cttraseras == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cttraseras == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           <p class="caja">
             <label for="crepuesto"> Repuesto</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="crepuesto" class="form-control" name="data[crepuesto]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="crepuesto" class="form-control" name="data[crepuesto]" value="no" required >
-        </p> 
+            <select name="crepuesto" id="crepuesto" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_crepuesto == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_crepuesto == "no") echo "selected" ?> >No</option>
+      </select>
+     </p> 
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -769,29 +979,38 @@ input:focus:invalid {
             <p class="caja">
               <label for="cderecho">Derecho</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" id="cderecho" class="form-control" name="data[cderecho]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cderecho" class="form-control" name="data[cderecho]" value="no" required >
-          </p>  
+              <select name="cderecho" id="cderecho" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cderecho == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cderecho == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           <p class="caja">
               <label for="cizquierdo"> Izquierdo</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cizquierdo" class="form-control" name="data[cizquierdo]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cizquierdo" class="form-control" name="data[cizquierdo]" value="no" required >
-          </p>  
+              <select name="cizquierdo" id="cizquierdo" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cizquierdo == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cizquierdo == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           <p class="caja">
             <label for="cretrovisor"> Retrovisor</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cretrovisor" class="form-control" name="data[cretrovisor]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cretrovisor" class="form-control" name="data[cretrovisor]" value="no" required >
-        </p> 
+            <select name="cretrovisor" id="cretrovisor" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cretrovisor == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cretrovisor == "no") echo "selected" ?> >No</option>
+      </select>  
+          </p> 
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+           
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -817,17 +1036,19 @@ input:focus:invalid {
              
               <label for="cbocina">Bocina</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbocina" class="form-control" name="data[cbocina]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbocina" class="form-control"  name="data[cbocina]" value="no" required >
-          </p>  
+              <select name="cbocina" id="cbocina" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cbocina == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cbocina == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -852,29 +1073,37 @@ input:focus:invalid {
             <p class="caja">
               <label for="cfrenos">Frenos</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cfrenos" class="form-control" name="data[cfrenos]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cfrenos" class="form-control" name="data[cfrenos]" value="no" required >
-          </p>  
+              <select name="cfrenos" id="cfrenos" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cfrenos == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cfrenos == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           <p class="caja">
               <label for="caceite"> Aceite</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input class="radio" type="radio" id="caceite" class="form-control" name="data[caceite]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="caceite" class="form-control" name="data[caceite]" value="no" required >
-          </p>  
+              <select name="caceite" id="caceite" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_caceite == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_caceite == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           <p class="caja">
             <label for="crefrigerante"> Refrigerante</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="crefrigerante" class="form-control" name="data[crefrigerante]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="crefrigerante" class="form-control" name="data[crefrigerante]" value="no" required >
-        </p> 
+            <select name="crefrigerante" id="crefrigerante" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_crefrigerante == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_crefrigerante == "no") echo "selected" ?> >No</option>
+      </select>
+     </p> 
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -899,23 +1128,28 @@ input:focus:invalid {
             <p class="caja">
               <label for="cdelan">Delanteras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdelan" class="form-control" name="data[cdelan]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdelan" class="form-control" name="data[cdelan]" value="no" required >
-          </p>  
+              <select name="cdelan" id="cdelan" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cdelan == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cdelan == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           <p class="caja">
               <label for="ctras"> Traseras</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  id="ctras" class="form-control" name="data[ctras]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ctras" class="form-control" name="data[ctras]" value="no" required >
-          </p>
+              <select name="ctras" id="ctras" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_ctras == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_ctras == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -940,17 +1174,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="ccinturones">Cinturones</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ccinturones" class="form-control"  name="data[ccinturones]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ccinturones" class="form-control" name="data[ccinturones]" value="no" required >
-          </p>
+              <select name="ccinturones" id="ccinturones" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_ccinturones == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_ccinturones == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -976,23 +1212,23 @@ input:focus:invalid {
             <p class="caja">
               <label for="ca">Cambio de Aceite</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="ca" class="form-control" nombre="data[ca]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="ca" class="form-control" nombre="data[ca]" min="2018-01-02"    required>
          
             </p>  
           <p class="caja">
               <label for="sincronizacion"> Sincronización</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="sincronizacion" class="form-control" nombre="data[sincronizacion]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="sincronizacion" class="form-control" nombre="data[sincronizacion]" min="2018-01-02"    required>
           </p>  
           <p class="caja">
             <label for="ab"> Alineación/<br>Balanceo</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="calen" type="date" id="ab" nombre="data[ab]" class="form-control" min="2018-01-02"   value="2020-12-31" required>
+            <input class="calen" type="date" id="ab" nombre="data[ab]" class="form-control" min="2018-01-02"    required>
         </p> 
         <p class="caja">
           <label for="cll"> Cambio de Llantas</label> 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="cll" class="form-control" nombre="data[cll]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="cll" class="form-control" nombre="data[cll]" min="2018-01-02"    required>
       </p> 
           </div>
           <div class="form-group" align="center">
@@ -1000,8 +1236,7 @@ input:focus:invalid {
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1026,12 +1261,12 @@ input:focus:invalid {
             <p class="caja">
               <label for="rtmecanica">Revisión Técnico Mecánica</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="rtmecanica" class="form-control" nombre="data[rtmecanica]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="rtmecanica" class="form-control" nombre="data[rtmecanica]" min="2018-01-02"    required>
           </p>  
           <p class="caja">
               <label for="casoat"> SOAT</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="casoat" class="form-control" nombre="data[casoat]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="casoat" class="form-control" nombre="data[casoat]" min="2018-01-02"    required>
           </p>  
           </div>
           <div class="form-group" align="center">
@@ -1039,8 +1274,7 @@ input:focus:invalid {
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1066,7 +1300,7 @@ input:focus:invalid {
             <p class="caja">
               <label for="fv"> Fecha de Vencimiento</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="calen" type="date" id="fv" class="form-control" nombre="data[fv]" min="2018-01-02"   value="2020-12-31" required>
+              <input class="calen" type="date" id="fv" class="form-control" nombre="data[fv]" min="2018-01-02"    required>
             </p>  
           <p class="caja">
               <label for="ecapacidad"> Capacidad</label> 
@@ -1079,8 +1313,7 @@ input:focus:invalid {
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1106,36 +1339,47 @@ input:focus:invalid {
             <p class="caja">
               <label for="calicates"> Alicates</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="calicates" class="form-control" name="data[calicates]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="calicates" class="form-control" name="data[calicates]" value="no" required >
-          </p>  
+              <select name="calicates" id="calicates" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_calicates == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_calicates == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           <p class="caja">
               <label for="cdestorni"> Destornilladores</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdestorni" class="form-control" name="data[cdestorni]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cdestorni" class="form-control" name="data[cdestorni]" value="no" required >
-          </p>  
+              <select name="cdestorni" id="cdestorni" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cdestorni == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cdestorni == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           <p class="caja">
              
             <label for="cle"> Llaves de Expansión</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cle" class="form-control" name="data[cle]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="radio" type="radio" id="cle" class="form-control" name="data[cle]" value="no" required >
-        </p> 
+            <select name="cle" id="cle" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cle == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cle == "no") echo "selected" ?> >No</option>
+      </select>
+    </p> 
         <p class="caja">
           <label for="clf"> Llaves Fijas</label> 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="clf" class="form-control" name="data[clf]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="clf" class="form-control" name="data[clf]" value="no" required >
-      </p> 
+          <select name="clf" id="clf" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_clf == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_clf == "no") echo "selected" ?> >No</option>
+      </select>
+    </p> 
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
          
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -1163,17 +1407,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="ccruceta">Cruceta</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ccruceta" class="form-control" name="data[ccruceta]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ccruceta" class="form-control" name="data[ccruceta]" value="no" required >
-          </p>  
+              <select name="ccruceta" id="ccruceta" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_ccruceta == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_ccruceta == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1199,17 +1445,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="cgh">Gato Hidráulico</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cgh" class="form-control" name="data[cgh]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cgh" class="form-control" name="data[cgh]" value="no" required >
-          </p> 
+              <select name="cgh" id="cgh" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cgh == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cgh == "no") echo "selected" ?> >No</option>
+      </select>
+            </p> 
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1235,17 +1483,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="ctaco">Taco</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ctaco" class="form-control" name="data[ctaco]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="ctaco" class="form-control" name="data[ctaco]" value="no" required >
-          </p>  
+              <select name="ctaco" id="ctaco" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_ctaco == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_ctaco == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1271,17 +1521,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="csenal">Señales</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="csenal" class="form-control" name="data[csenal]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="csenal" class="form-control" name="data[csenal]" value="no" required >
-          </p>  
+              <select name="csenal" id="csenal" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_csenal == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_csenal == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1307,17 +1559,19 @@ input:focus:invalid {
             <p class="caja">
               <label for="cchaleco">Chaleco Reflectivo</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio"  id="cchaleco" class="form-control" name="data[cchaleco]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cchaleco" class="form-control" name="data[cchaleco]" value="no" required >
-          </p>  
+              <select name="cchaleco" id="cchaleco" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cchaleco == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cchaleco == "no") echo "selected" ?> >No</option>
+      </select>
+     </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           <div  class="form-group" align="center" >
-            <input type="button" name="previous" class="previous btn btn-default" value="Previo" />
-            <input type="button" name="next" class="next btn btn-info" value="Siguiente" />
+            <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
           </div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -1345,9 +1599,12 @@ input:focus:invalid {
              
               <label for="cbotiquin" class="form-group">Botiquín</label> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbotiquin" class="form-control" name="data[cbotiquin]" value="si" required >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input class="radio" type="radio" id="cbotiquin" class="form-control" name="data[cbotiquin]" value="no" required >
-          </p>  
+              <select name="cbotiquin" id="cbotiquin" required>
+				<option value="">Selecciona uno</option>
+        <option value="si" <?php if($task_cbotiquin == "si") echo "selected" ?> >Si</option>
+        <option value="no" <?php if($task_cbotiquin == "no") echo "selected" ?> >No</option>
+      </select>
+    </p>  
           </div>
           <div class="form-group" align="center">
             <label for="message-text" class="col-form-label">Observaciones:</label>

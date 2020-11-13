@@ -143,6 +143,7 @@ if(isset($_POST['clicencia'])) {
                              '$task_cchaleco',
                              '$task_cbotiquin')";
   $result = mysqli_query($connection, $query);
+  
   if (!$result) {
     die('Query Failed.');
   }
