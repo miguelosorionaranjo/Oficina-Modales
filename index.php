@@ -258,7 +258,7 @@ input:focus:invalid {
           <h3 class="text-left text-light"><span class="badge badge-dark">Datos Básicos</span></h3> 
           <div class="row">
             <div class="col-md-5 mb-3">
-              <label for="country">Activo:</label>
+              <label for="country">Vehículo:</label>
             <select class="custom-select d-block w-100" id="activo" required>
               <option value="">Opciones...</option>
               <option>Moto 1</option>
@@ -266,7 +266,7 @@ input:focus:invalid {
             </select>
             </div>
             <div class="col-md-4 mb-3">
-              <label for="state">Actor Vial</label>
+              <label for="state">Conductor</label>
               <select class="custom-select d-block w-100" id="state" required>
                 <option value="">Opciones...</option>
                 <option>California</option>
