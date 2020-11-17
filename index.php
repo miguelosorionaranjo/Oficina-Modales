@@ -586,19 +586,19 @@ input:focus:invalid {
 				$radio = array();
 
 				if($task_clicencia == ""){
-					array_push($radio, "Selecciona un nivel de desarrollo.");
+					array_push($radio, "Selecciona una opción.");
         }
         
         if($task_csoat == ""){
-					array_push($radio, "Selecciona un nivel de desarrollo.");
+					array_push($radio, "Selecciona una opcióno.");
         }
         
         if($task_crtm == ""){
-					array_push($radio, "Selecciona un nivel de desarrollo.");
+					array_push($radio, "Selecciona una opción.");
         }
         
         if($task_crc == ""){
-					array_push($radio, "Selecciona un nivel de desarrollo.");
+					array_push($radio, "Selecciona una opción.");
 				}
 				// TODO (3) Validar que el campo no esté vacío
 				if($lenguajes == "" || count($lenguajes) < 2){
@@ -687,8 +687,8 @@ input:focus:invalid {
             </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_documentos" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_documentos"></textarea>
           </div>
           <div  class="form-group" align="center" >
           <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" /> 
@@ -733,8 +733,8 @@ input:focus:invalid {
      </p>   
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_direccionales" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_direccionales"></textarea>
           </div>
           <div  class="form-group" align="center" >
            
@@ -808,8 +808,8 @@ input:focus:invalid {
           </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_luces" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_luces"></textarea>
           </div>
           <div  class="form-group" align="center" >
             
@@ -846,8 +846,8 @@ input:focus:invalid {
             </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_limpiabrisas" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_limpiabrisas"></textarea>
           </div>
           <div  class="form-group" align="center" >
            
@@ -893,8 +893,8 @@ input:focus:invalid {
             </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_frenos" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_frenos"></textarea>
           </div>
           <div  class="form-group" align="center" >
             
@@ -949,8 +949,8 @@ input:focus:invalid {
      </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_llantas" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_llantas"></textarea>
           </div>
           <div  class="form-group" align="center" >
             
@@ -1005,8 +1005,8 @@ input:focus:invalid {
           </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_espejos" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_espejos"></textarea>
           </div>
           <div  class="form-group" align="center" >
            
@@ -1044,8 +1044,8 @@ input:focus:invalid {
      </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_bocina" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_bocina"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1099,8 +1099,8 @@ input:focus:invalid {
      </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_nf" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_nf"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1145,8 +1145,8 @@ input:focus:invalid {
     </p>
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_apoya" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_apoya"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1182,8 +1182,8 @@ input:focus:invalid {
     </p>
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_cs" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_cs"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1232,8 +1232,8 @@ input:focus:invalid {
       </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_fm" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_fm"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1270,8 +1270,8 @@ input:focus:invalid {
           </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_fv" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_fv"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1309,8 +1309,8 @@ input:focus:invalid {
           </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_ext" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_ext"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1375,8 +1375,8 @@ input:focus:invalid {
     </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_herr" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_herr"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1415,8 +1415,8 @@ input:focus:invalid {
     </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_cru" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_cru"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1453,8 +1453,8 @@ input:focus:invalid {
             </p> 
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_gh" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_gh"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1491,8 +1491,8 @@ input:focus:invalid {
     </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_taco" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_taco"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1529,8 +1529,8 @@ input:focus:invalid {
      </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_senal" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_senal"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1567,8 +1567,8 @@ input:focus:invalid {
      </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_cr" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_cr"></textarea>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1607,8 +1607,8 @@ input:focus:invalid {
     </p>  
           </div>
           <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_boti" class="col-form-label">Observaciones:</label>
+            <textarea class="form-control" id="o_boti"></textarea>
           </div>
           <br>
           <div  class="form-group" align="center" >
@@ -1622,8 +1622,8 @@ input:focus:invalid {
 </div>
 
 <div class="form-group" align="center">
-            <label for="message-text" class="col-form-label">Observaciones Generales:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="o_general" class="col-form-label">Observaciones Generales:</label>
+            <textarea class="form-control" id="o_general"></textarea>
           </div>
           <div  class="form-group" align="center"  >
 
