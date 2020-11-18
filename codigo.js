@@ -1,3 +1,267 @@
+//Observaciones Generales
+function botiqui(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("charm").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("charm").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Botiquin
+function botiquin(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("char").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("char").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Chaleco Reflectivo
+function cr(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("cr").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("cr").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Señales
+function senal(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("senal").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("senal").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Taco
+function taco(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("taco").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("taco").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Gato Hidráulico
+function gh(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("gh").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("gh").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Cruceta
+function cru(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("cru").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("cru").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Herramientas
+function herr(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("herr").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("herr").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Extintores
+function ext(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("ext").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("ext").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Fecha de Vencimiento
+function fv(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("fv").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("fv").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Última Fecha de Mantenimiento
+function fm(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("fm").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("fm").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Cinturones de Seguridad
+function cs(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("cs").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("cs").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//apoyacabezas
+function apoya(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("apoya").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("apoya").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Nivel de Fluidos
+function nf(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("nf").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("nf").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Bocina
+function bocina(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("bocina").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("bocina").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//espejos
+function espejos(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("espejos").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("espejos").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//llantas
+function llantas(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("llantas").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("llantas").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//frenos
+function frenos(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("frenos").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("frenos").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//limpiabrisas
+function lim(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("lim").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("lim").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Luces
+function luces(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("luces").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("luces").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Direccionales
+function dirr(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("dirr").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("dirr").innerHTML = charRemain+' caracteres restantes';
+  }
+}
+//Documentos
+function doc(obj){
+  var maxLength = 200;
+  var strLength = obj.value.length;
+  var charRemain = (maxLength - strLength);
+  
+  if(charRemain < 0){
+      document.getElementById("doc").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+  }else{
+      document.getElementById("doc").innerHTML = charRemain+' caracteres restantes';
+  }
+}
 
 // Funciones
 $(document).ready(function() {
@@ -6,6 +270,8 @@ $(document).ready(function() {
   // Testing Jquery
   console.log('jquery is working!');
   fetchTasks();
+
+  
  
   $('#task-result').hide();
   $('#task-form').submit(e => {

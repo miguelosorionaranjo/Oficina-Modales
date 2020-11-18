@@ -60,6 +60,12 @@ vertical-align: top;
 /* Proporcionar espacio para escribir texto */
 height: 5em;
 }
+.borderojo {
+outline: none;
+border: 1px solid #f00;
+}
+.bordegris { border: 1px solid #d4d4d; }
+
 .button {
 /* Alinear los botones con los campos de texto */
 padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
@@ -688,7 +694,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_documentos" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_documentos"></textarea>
+            <textarea class="form-control" onkeyup="doc(this);" maxlength="201" id="o_documentos"></textarea>
+            <p id="doc">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
           <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" /> 
@@ -734,7 +741,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_direccionales" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_direccionales"></textarea>
+            <textarea class="form-control" onkeyup="dirr(this);" maxlength="201" id="o_direccionales"></textarea>
+            <p id="dirr">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
            
@@ -809,7 +817,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_luces" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_luces"></textarea>
+            <textarea class="form-control" onkeyup="luces(this);" maxlength="201" id="o_luces"></textarea>
+            <p id="luces">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             
@@ -847,7 +856,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_limpiabrisas" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_limpiabrisas"></textarea>
+            <textarea class="form-control" onkeyup="lim(this);" maxlength="201" id="o_limpiabrisas"></textarea>
+            <p id="lim">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
            
@@ -894,7 +904,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_frenos" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_frenos"></textarea>
+            <textarea class="form-control" onkeyup="frenos(this);" maxlength="201" id="o_frenos"></textarea>
+            <p id="frenos">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             
@@ -950,7 +961,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_llantas" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_llantas"></textarea>
+            <textarea class="form-control" onkeyup="llantas(this);" maxlength="201" id="o_llantas"></textarea>
+            <p id="llantas">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             
@@ -1006,7 +1018,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_espejos" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_espejos"></textarea>
+            <textarea class="form-control" onkeyup="espejos(this);" maxlength="201" id="o_espejos"></textarea>
+            <p id="espejos">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
            
@@ -1045,7 +1058,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_bocina" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_bocina"></textarea>
+            <textarea class="form-control" onkeyup="bocina(this);" maxlength="201" id="o_bocina"></textarea>
+            <p id="bocina">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1100,7 +1114,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_nf" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_nf"></textarea>
+            <textarea class="form-control" onkeyup="nf(this);" maxlength="201" id="o_nf"></textarea>
+            <p id="nf">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1146,7 +1161,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_apoya" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_apoya"></textarea>
+            <textarea class="form-control" onkeyup="apoya(this);" maxlength="201" id="o_apoya"></textarea>
+            <p id="apoya">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1183,7 +1199,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_cs" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_cs"></textarea>
+            <textarea class="form-control" onkeyup="cs(this);" maxlength="201" id="o_cs"></textarea>
+            <p id="cs">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1233,7 +1250,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_fm" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_fm"></textarea>
+            <textarea class="form-control" onkeyup="fm(this);" maxlength="201" id="o_fm"></textarea>
+            <p id="fm">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1271,7 +1289,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_fv" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_fv"></textarea>
+            <textarea class="form-control" onkeyup="fv(this);" maxlength="201" id="o_fv"></textarea>
+            <p id="fv">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1310,7 +1329,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_ext" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_ext"></textarea>
+            <textarea class="form-control" onkeyup="ext(this);" maxlength="201" id="o_ext"></textarea>
+            <p id="ext">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1376,7 +1396,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_herr" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_herr"></textarea>
+            <textarea class="form-control" onkeyup="herr(this);" maxlength="201" id="o_herr"></textarea>
+            <p id="herr">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1416,7 +1437,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_cru" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_cru"></textarea>
+            <textarea class="form-control" onkeyup="cru(this);" maxlength="201" id="o_cru"></textarea>
+            <p id="cru">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1454,7 +1476,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_gh" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_gh"></textarea>
+            <textarea class="form-control" onkeyup="gh(this);" maxlength="201" id="o_gh"></textarea>
+            <p id="gh">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1492,7 +1515,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_taco" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_taco"></textarea>
+            <textarea class="form-control" onkeyup="taco(this);" maxlength="201" id="o_taco"></textarea>
+            <p id="taco">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1530,7 +1554,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_senal" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_senal"></textarea>
+            <textarea class="form-control" onkeyup="senal(this);" maxlength="201" id="o_senal"></textarea>
+            <p id="senal">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1568,7 +1593,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_cr" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_cr"></textarea>
+            <textarea class="form-control" onkeyup="cr(this);" maxlength="201" id="o_cr"></textarea>
+            <p id="cr">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />
@@ -1608,7 +1634,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_boti" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" id="o_boti"></textarea>
+            <textarea class="form-control" onkeyup="botiquin(this);" maxlength="201" id="o_boti"></textarea>
+            <p id="char">200 caracteres restantes</p>
           </div>
           <br>
           <div  class="form-group" align="center" >
@@ -1621,9 +1648,12 @@ input:focus:invalid {
   </div>
 </div>
 
+
+
 <div class="form-group" align="center">
-            <label for="o_general" class="col-form-label">Observaciones Generales:</label>
-            <textarea class="form-control" id="o_general"></textarea>
+            <p for="o_general"> Observaciones Generales: </p>
+            <textarea class="form-control" onkeyup="botiqui(this);" id="o_general" maxlength="201"></textarea>
+            <p id="charm">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center"  >
 
@@ -1631,8 +1661,6 @@ input:focus:invalid {
                   <button  type="submit" class="btn btn-secondary btn-block text-center " >
                   Aceptar
                   </button>
-                  
-           
           </div>
 </form>
 <!--Final  Modales     -->
