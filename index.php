@@ -1289,8 +1289,8 @@ input:focus:invalid {
           </div>
           <div class="form-group" align="center">
             <label for="o_fv" class="col-form-label">Observaciones:</label>
-            <textarea class="form-control" onkeyup="fv(this);" maxlength="201" id="o_fv"></textarea>
-            <p id="fv">200 caracteres restantes</p>
+            <textarea class="form-control" onkeyup="venci(this);" maxlength="201" id="o_fv"></textarea>
+            <p id="venci">200 caracteres restantes</p>
           </div>
           <div  class="form-group" align="center" >
             <input type="button" name="next" class="next btn btn-info" data-dismiss="modal" value="Siguiente" />

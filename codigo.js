@@ -107,15 +107,15 @@ function ext(obj){
   }
 }
 //Fecha de Vencimiento
-function fv(obj){
+function venci(obj){
   var maxLength = 200;
   var strLength = obj.value.length;
   var charRemain = (maxLength - strLength);
   
   if(charRemain < 0){
-      document.getElementById("fv").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
+      document.getElementById("venci").innerHTML = '<span style="color: red;">Has superado el límite de '+maxLength+' caracteres</span>';
   }else{
-      document.getElementById("fv").innerHTML = charRemain+' caracteres restantes';
+      document.getElementById("venci").innerHTML = charRemain+' caracteres restantes';
   }
 }
 //Última Fecha de Mantenimiento
