@@ -1696,7 +1696,7 @@ input:focus:invalid {
     setProgressBar(current);
     // Change progress bar action
     function setProgressBar(curStep){
-      var percent = parseFloat(100 / steps) * curStep;
+      var percent = parseFloat(95 / steps) * curStep;
       percent = percent.toFixed();
       $(".progress-bar")
         .css("width",percent+"%")

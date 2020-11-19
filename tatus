@@ -1,0 +1,101 @@
+[33mcommit fa503ab51fa7abe9800f0475e8824d40c05e0da0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Nov 18 17:09:10 2020 -0500
+
+    listo
+
+[33mcommit 3befb6b85142e99f6ce53df86e5c03e26f6e8b7b[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Nov 18 16:32:16 2020 -0500
+
+    limite de caracteres del campo observaciones
+
+[33mcommit b2397f666a706154a4e38e687473d933ed7e5676[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Tue Nov 17 12:40:14 2020 -0500
+
+    Observaciones de todos los modales y observaciones generales
+
+[33mcommit 445e77d8115da1193225e01f1ec22bc893046c8e[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Fri Nov 13 15:05:16 2020 -0500
+
+    Base de datos
+
+[33mcommit 6ea262fa502697e8e560bf6ef52a457d8959c562[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Fri Nov 13 13:05:02 2020 -0500
+
+    observaciones generales
+
+[33mcommit a6d364b6845dc13ac5df221041523674f037a284[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Fri Nov 13 12:58:59 2020 -0500
+
+    datos insertados en la bdd, cambio radio button por select
+
+[33mcommit 1d0ed3cd3cb7c59e7e96bb72ba22f933e05f8c3c[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Nov 11 10:39:16 2020 -0500
+
+    capacidad del extintor corregido en el form
+
+[33mcommit ff7f0f333c704a9c051bec2c14e422a58cae8900[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Tue Nov 10 17:02:29 2020 -0500
+
+    error codigo add.php corregido
+
+[33mcommit b7ec7b1a0255e68d8434dedfb7df1444eeb23563[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Tue Nov 10 16:07:57 2020 -0500
+
+    Insert datos en bdd
+
+[33mcommit 71f54d1fb49e603c6c6af61a59e5a722035c4970[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Mon Nov 9 15:26:24 2020 -0500
+
+    Hola mundo
+
+[33mcommit 5a057052bfb4289a43c43f791890ae7077f5c6ac[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Tue Nov 3 11:50:57 2020 -0500
+
+    Captura los datos pero aún no los inserta en la bdd
+
+[33mcommit 93d210478f6f3d11eecf002ffd1aedd986c59259[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Fri Oct 30 11:10:11 2020 -0500
+
+    error bobo
+
+[33mcommit 89138f488775f90821ae0a42cdb070b72a7f3385[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Fri Oct 30 11:01:51 2020 -0500
+
+    Aún no registra los datos
+
+[33mcommit 2f91c4c1825170feda16212a5d63ba4211750d25[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Thu Oct 29 11:08:28 2020 -0500
+
+    error en el task-add a la hora de registrar
+
+[33mcommit 35c7abdf8e0ce2a6f3ecfa63164feb6e456b5c56[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Oct 28 16:21:50 2020 -0500
+
+    Otro comentario más
+
+[33mcommit e2124a5b65a3e6107b30ec817bda04f9a5904bdb[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Oct 28 11:37:54 2020 -0500
+
+    modificación archivo codigo punto js
+
+[33mcommit d58706864202c7669a04374ac5322a681c24c4ba[m
+Author: Miguel Osorio Naranjo <miguelosorionaranjo@gmail.com>
+Date:   Wed Oct 28 11:26:03 2020 -0500
+
+    first commit
